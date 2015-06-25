@@ -12,22 +12,16 @@ filetype plugin on
 filetype indent on
 
 set autoread
-
 set nocompatible
-
 set wildmenu
-
 set ruler
-
 set cmdheight=2
-
 set hid
 
 "directories for backup
-
-set backupdir=$HOME/.vimbackup//
-set directory=$HOME/.vimswap//
-set viewdir=$HOME/.vimviews//
+set backupdir=$HOME/.vim/backup//
+set directory=$HOME/.vim/swap//
+set viewdir=$HOME/.vim/views//
 
 "key functionality that makes sense
 set backspace=eol,start,indent
@@ -38,7 +32,6 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-
 set lazyredraw
 set magic
 set showmatch
