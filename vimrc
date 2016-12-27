@@ -2,10 +2,10 @@
 " VIMRC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 
-set history=700
+set history=1000
 
 " filetypes
 filetype plugin on
@@ -19,9 +19,9 @@ set cmdheight=2
 set hid
 
 "directories for backup
-set backupdir=$HOME/.vim/backup//
-set directory=$HOME/.vim/swap//
-set viewdir=$HOME/.vim/views//
+"set backupdir=$HOME/.vim/backup//
+"set directory=$HOME/.vim/swap//
+"set viewdir=$HOME/.vim/views//
 
 "key functionality that makes sense
 set backspace=eol,start,indent
@@ -46,14 +46,6 @@ syntax on
 
 "cursor bar
 set cursorline
-
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-
-colorscheme solarized
-
-set background=dark
 
 "enconding and file types
 set encoding=utf8
@@ -83,7 +75,7 @@ set wrap "Wrap lines
 set laststatus=2
 
 " Format the status line
-let g:airline_powerline_fonts = 1  
+"let g:airline_powerline_fonts = 1  
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Smart way to move between windows
@@ -106,41 +98,41 @@ inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
 
 " showmarks plz
-let g:showmarks_enable = 1
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+"let g:showmarks_enable = 1
+"let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-let showmarks_ignore_type = "hqm"
+"let showmarks_ignore_type = "hqm"
 
-let showmarks_hlline_lower = 1
-let showmarks_hlline_upper = 0
+"let showmarks_hlline_lower = 1
+"let showmarks_hlline_upper = 0
 
-if &background == "light"
-    " For marks a-z
-    hi clear ShowMarksHLl
-    hi ShowMarksHLl term=bold cterm=none ctermbg=grey gui=none guibg=grey
+"if &background == "light"
+"    " For marks a-z
+"    hi clear ShowMarksHLl
+"    hi ShowMarksHLl term=bold cterm=none ctermbg=grey gui=none guibg=grey
     
     " For marks A-Z
-    hi clear ShowMarksHLu
-    hi ShowMarksHLu term=bold cterm=bold ctermbg=lightred ctermfg=darkred gui=bold guibg=lightred guifg=darkred
-else
+"    hi clear ShowMarksHLu
+"    hi ShowMarksHLu term=bold cterm=bold ctermbg=lightred ctermfg=darkred gui=bold guibg=lightred guifg=darkred
+"else
 " For marks a-z
-    hi clear ShowMarksHLl
-    hi ShowMarksHLl term=bold cterm=bold ctermbg=lightblue gui=bold guibg=lightblue guifg=darkblue 
+"    hi clear ShowMarksHLl
+"    hi ShowMarksHLl term=bold cterm=bold ctermbg=lightblue gui=bold guibg=lightblue guifg=darkblue 
     "guibg=#eee8d5
 " For marks A-Z
-    hi clear ShowMarksHLu
-    hi ShowMarksHLu term=bold cterm=bold ctermbg=lightred ctermfg=darkred gui=bold guibg=lightred guifg=darkred
-endif
+"    hi clear ShowMarksHLu
+"    hi ShowMarksHLu term=bold cterm=bold ctermbg=lightred ctermfg=darkred gui=bold guibg=lightred guifg=darkred
+"endif
 
 map ,b :CtrlPBuffer
 
 " ctrlp mapping
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlP'
 
 " ctrlp settings
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+"set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "let g:ctrlp_custom_ignore = {
