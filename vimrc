@@ -34,11 +34,12 @@ set hlsearch
 set incsearch
 set lazyredraw
 set magic
-set showmatch
 
 set mat=2
 
+"hybrid number
 set number
+set relativenumber
 
 "visuals
 syntax enable
@@ -61,8 +62,9 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-set lbr
-set tw=500
+"linebreak and wordwrap
+set linebreak
+set textwidth=100
 
 
 set ai "Auto indent
@@ -75,12 +77,12 @@ set pastetoggle=<F3>
 """"""
 "status line
 """"""
-
+"always show the status line
 set laststatus=2
 
 " Format the status line
 "let g:airline_powerline_fonts = 1  
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -90,6 +92,15 @@ map <C-l> <C-W>l
 
 map j gj
 map k gk
+
+"pair matching
+set showmatch
+set matchtime=2
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
 
 "tab movement mapping
 
@@ -164,6 +175,8 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType coffeescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType mako setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
