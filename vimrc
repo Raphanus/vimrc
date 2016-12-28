@@ -54,11 +54,12 @@ set ffs=unix,dos,mac
 
 "tab settings
 set expandtab
-
 set smarttab
 
+"tab values
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
 
 set lbr
 set tw=500
@@ -67,6 +68,9 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+"paste mode
+set pastetoggle=<F3>
 
 """"""
 "status line
@@ -159,4 +163,7 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType mako setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
