@@ -4,15 +4,25 @@
 
 "execute pathogen#infect()
 
+set nocompatible
+filetype off
 
-set history=1000
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" vundle managing vundle, makes sense
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
 
 " filetypes
 filetype plugin on
 filetype indent on
 
+set history=1000
+
 set autoread
-set nocompatible
 set wildmenu
 set ruler
 set cmdheight=2
