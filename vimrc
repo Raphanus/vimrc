@@ -173,6 +173,8 @@ func! DeleteTrailingWS()
     exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.js :call DeleteTrailingWS()
+autocmd BufWrite *.jsx :call DeleteTrailingWS()
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
