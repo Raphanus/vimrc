@@ -94,6 +94,9 @@ set softtabstop=4
 set linebreak
 set textwidth=100
 
+"show whitespace
+set list
+
 
 set ai "Auto indent
 set si "Smart indent
